@@ -190,7 +190,7 @@ const getUser = async () => {
       name: profile.name || authUser.email?.split('@')[0] || 'User',
       role: profile.role || 'Employee',
       email: profile.email || authUser.email,
-      isAdmin: profile.role === 'Administrator',
+      isAdmin: profile.role === 'Administrator'||profile.role === 'admin',
       services: profile.services || [],
       is_active: profile.is_active,
       email_verified: profile.email_verified,
